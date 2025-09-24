@@ -1,8 +1,10 @@
 title: EvaluationContext.Colour Docs
 description: Docs for the DaxLib EvaluationContext.Colour library. A set of DAX User-Defined Functions (UDF) designed to enable easy manipulation of hex colours for Power BI.
-remote_theme: just-the-docs/just-the-docs
+remote_theme: just-the-docs/just-the-docs@v0.4.2
+theme: just-the-docs
 plugins:
   - jekyll-remote-theme
+  - jekyll-seo-tag
 
 url: "https://evaluationcontext.github.io/daxlib-evaluationcontext-colour-docs"
 repository: EvaluationContext/daxlib-evaluationcontext-colour-docs
@@ -38,10 +40,8 @@ aux_links_new_tab: true
 heading_anchors: true
 
 kramdown:
-  syntax_highlighter: rouge
-  syntax_highlighter_opts:
-    block:
-      line_numbers: false
+  syntax_highlighter: none
+  syntax_highlighter_opts: {}
 
 back_to_top: true
 back_to_top_text: "Back to top"
