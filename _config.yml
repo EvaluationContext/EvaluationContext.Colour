@@ -1,8 +1,42 @@
-title: Just the Docs Template
-description: A starter template for a Jeykll site using the Just the Docs theme!
+title: EvaluationContext.Colour Docs
+description: Docs for the DaxLib EvaluationContext.Colour library. A set of DAX User-Defined Functions (UDF) designed to enable easy manipulation of hex colours for Power BI.
 theme: just-the-docs
 
-url: https://just-the-docs.github.io
+url: "https://evaluationcontext.github.io/daxlib-evaluationcontext-colour-docs"
+repository: EvaluationContext/daxlib-evaluationcontext-colour-docs
+
+permalink: pretty
+
+defaults:
+  - scope:
+      path: "docs" # an empty string here means all files in the project
+      type: "pages"
+    values:
+      layout: "default"
+
+# logo: "/assets/img/icon.png"
+favicon_ico: "/asset/img/favicon/favicon.ico"
+
+search_enabled: true
+
+callouts_level: quiet # or loud
+callouts:
+  info:
+    title: Info
+    color: blue
+  tip:
+    title: tip
+    color: green
 
 aux_links:
-  Template Repository: https://github.com/just-the-docs/just-the-docs-template
+  "DaxLib":
+    - "https://daxlib.org/package/EvaluationContext.Colour/"
+aux_links_new_tab: true
+
+heading_anchors: true
+
+kramdown:
+  syntax_highlighter: None #rouge
+
+back_to_top: true
+back_to_top_text: "Back to top"
