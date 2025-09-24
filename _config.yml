@@ -38,9 +38,16 @@ aux_links_new_tab: true
 heading_anchors: true
 
 kramdown:
-  syntax_highlighter: None #rouge
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    block:
+      line_numbers: false
 
 back_to_top: true
 back_to_top_text: "Back to top"
 
 just_the_docs_add_sri: false
+
+# Enable syntax highlighting
+color_scheme: light
+enable_copy_code_button: true
