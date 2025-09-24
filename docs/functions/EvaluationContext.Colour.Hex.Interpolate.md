@@ -25,5 +25,5 @@ EvaluationContext.Colour.Hex.Interpolate(startHexColour, endHexColour, percentag
 **Example:**
 
 ```dax
-EvaluationContext.Colour.Hex.Interpolate("#FF0000", "#0000FF", 0.5) // Returns "<span style="color: #800080">■</span> #800080" (Purple)
+EvaluationContext.Colour.Hex.Interpolate("#FF0000", "#0000FF", 0.5) // Returns "#800080"
 ```

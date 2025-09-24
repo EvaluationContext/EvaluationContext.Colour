@@ -23,7 +23,7 @@ EvaluationContext.Colour.Hex.Theme(themeName, variant)
 
 **Available Themes and Colors:**
 
-#### Power BI Theme (41 variants)
+### Power BI Theme (41 variants)
 
 | Variant | Colour |
 |:---:|:---:|
@@ -35,7 +35,7 @@ EvaluationContext.Colour.Hex.Theme(themeName, variant)
 | ... | ... |
 | 41 | <span style="color: #0B511F">■</span> #0B511F |
 
-#### Modern Corporate Theme (6 variants)
+### Modern Corporate Theme (6 variants)
 
 | Variant | Colour |
 |:---:|:---:|
@@ -46,7 +46,7 @@ EvaluationContext.Colour.Hex.Theme(themeName, variant)
 | 5 | <span style="color: #5E81AC">■</span> #5E81AC |
 | 6 | <span style="color: #81A1C1">■</span> #81A1C1 |
 
-#### Ocean Breeze Theme (6 variants)
+### Ocean Breeze Theme (6 variants)
 
 | Variant | Colour |
 |:---:|:---:|
@@ -57,7 +57,7 @@ EvaluationContext.Colour.Hex.Theme(themeName, variant)
 | 5 | <span style="color: #B0E0E6">■</span> #B0E0E6 |
 | 6 | <span style="color: #E0F6FF">■</span> #E0F6FF |
 
-#### Sunset Vibes Theme (6 variants)
+### Sunset Vibes Theme (6 variants)
 
 | Variant | Colour |
 |:---:|:---:|
@@ -68,7 +68,7 @@ EvaluationContext.Colour.Hex.Theme(themeName, variant)
 | 5 | <span style="color: #C04000">■</span> #C04000 |
 | 6 | <span style="color: #FFCBA4">■</span> #FFCBA4 |
 
-#### Forest Green Theme (6 variants)
+### Forest Green Theme (6 variants)
 
 | Variant | Color |
 |:---:|:---:|
@@ -79,7 +79,7 @@ EvaluationContext.Colour.Hex.Theme(themeName, variant)
 | 5 | <span style="color: #98FB98">■</span> #98FB98 |
 | 6 | <span style="color: #F0FFF0">■</span> #F0FFF0 |
 
-#### Purple Rain Theme (6 variants)
+### Purple Rain Theme (6 variants)
 
 | Variant | Colour |
 |:---:|:---:|
@@ -90,7 +90,7 @@ EvaluationContext.Colour.Hex.Theme(themeName, variant)
 | 5 | <span style="color: #DDA0DD">■</span> #DDA0DD |
 | 6 | <span style="color: #E6E6FA">■</span> #E6E6FA |
 
-#### Monochrome Theme (6 variants)
+### Monochrome Theme (6 variants)
 
 | Variant | Colour |
 |:---:|:---:|
@@ -101,7 +101,7 @@ EvaluationContext.Colour.Hex.Theme(themeName, variant)
 | 5 | <span style="color: #CCCCCC">■</span> #CCCCCC |
 | 6 | <span style="color: #F5F5F5">■</span> #F5F5F5 |
 
-#### Vibrant Tech Theme (6 variants)
+### Vibrant Tech Theme (6 variants)
 
 | Variant | Colour |
 |:---:|:---:|
@@ -112,7 +112,7 @@ EvaluationContext.Colour.Hex.Theme(themeName, variant)
 | 5 | <span style="color: #8000FF">■</span> #8000FF | 
 | 6 | <span style="color: #00FF80">■</span> #00FF80 | 
 
-#### Earth Tones Theme (6 variants)
+### Earth Tones Theme (6 variants)
 
 | Variant | Colour |
 |:---:|:---:|
@@ -123,7 +123,7 @@ EvaluationContext.Colour.Hex.Theme(themeName, variant)
 | 5 | <span style="color: #F4A460">■</span> #F4A460 |
 | 6 | <span style="color: #FFF8DC">■</span> #FFF8DC |
 
-#### Pastel Dreams Theme (5 variants)
+### Pastel Dreams Theme (5 variants)
 
 | Variant | Colour |
 |:---:|:---:|
@@ -133,7 +133,7 @@ EvaluationContext.Colour.Hex.Theme(themeName, variant)
 | 4 | <span style="color: #BAFFC9">■</span> #BAFFC9 |
 | 5 | <span style="color: #BAE1FF">■</span> #BAE1FF |
 
-#### Midnight Blue Theme (6 variants)
+### Midnight Blue Theme (6 variants)
 
 | Variant | Colour |
 |:---:|:---:|
