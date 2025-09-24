@@ -13,7 +13,7 @@ Docs for the EvaluationContext.Colour [DaxLib](https://daxlib.org/) library. A s
 {: .fs-6 .fw-300 }
 
 [Download From DaxLib](https://daxlib.org/package/EvaluationContext.Colour/){: .btn .btn-green }
-[Download Example PBIP](https://github.com/EvaluationContext/daxlib-evaluationcontext-colour-docs/assets/PBIP){: .btn .btn-green }
+[Download Example PBIP](https://github.com/EvaluationContext/daxlib-evaluationcontext-colour-docs/tree/main/assets/PBIP){: .btn .btn-green }
 
 ---
 
