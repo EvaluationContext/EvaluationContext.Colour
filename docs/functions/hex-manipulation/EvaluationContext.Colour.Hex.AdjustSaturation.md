@@ -26,6 +26,12 @@ EvaluationContext.Colour.Hex.AdjustSaturation(hexColor, saturationChange)
 
 (*STRING*) Modified hex color
 
+## Example
+
+```dax
+EvaluationContext.Colour.Hex.AdjustSaturation("#5E81AC", -0.1) // Returns "#6A82A099"
+```
+
 ## Definition
 
 ```dax

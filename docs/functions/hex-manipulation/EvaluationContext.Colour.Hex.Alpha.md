@@ -25,6 +25,12 @@ EvaluationContext.Colour.Hex.Alpha(hexColor)
 
 (*DOUBLE*) Alpha value (0-1)
 
+## Example
+
+```dax
+EvaluationContext.Colour.Hex.Alpha("#5E81AC") // Returns 0.6
+```
+
 ## Definition
 
 ```dax

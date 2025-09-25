@@ -26,6 +26,12 @@ EvaluationContext.Colour.Hex.Theme(themeName, variant)
 
 (*STRING*) Theme colour in hex format
 
+## Example
+
+```dax
+EvaluationContext.Colour.Hex.Theme("Power BI", 2) // Returns "#12239E"
+```
+
 ---
 
 ## Themes

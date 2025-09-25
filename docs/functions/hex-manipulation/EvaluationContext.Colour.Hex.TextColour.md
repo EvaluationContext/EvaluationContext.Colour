@@ -25,6 +25,12 @@ EvaluationContext.Colour.Hex.TextColour(backgroundHex)
 
 (*STRING*) <span style="color: #000000">■</span> #000000 for dark text or <span style="color: #FFFFFF">■</span> #FFFFFF for light text
 
+## Example
+
+```dax
+EvaluationContext.Colour.Hex.TextColour("#5E81AC") // Returns "#FFFFFF"
+```
+
 ## Definition
 
 ```dax

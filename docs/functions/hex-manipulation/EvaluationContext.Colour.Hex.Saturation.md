@@ -25,6 +25,12 @@ EvaluationContext.Colour.Hex.Saturation(hexColor)
 
 (*DOUBLE*) Saturation value (0-1)
 
+## Example
+
+```dax
+EvaluationContext.Colour.Hex.Saturation("#5E81AC") // Returns 0.32
+```
+
 ## Definition
 
 ```dax

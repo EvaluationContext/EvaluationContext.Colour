@@ -28,6 +28,12 @@ EvaluationContext.Colour.Hex.LinearTheme(hexColor, variant, steps, linearRange)
 
 (*STRING*) Gradient variant color in hex format
 
+## Example
+
+```dax
+EvaluationContext.Colour.Hex.LinearTheme("#118DFF", 2, 7, 0.5) // Returns "#0061BBFF"
+```
+
 ## Definition
 
 ```dax

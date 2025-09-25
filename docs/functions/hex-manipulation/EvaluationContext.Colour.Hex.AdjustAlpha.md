@@ -24,7 +24,13 @@ EvaluationContext.Colour.Hex.AdjustAlpha(hexColor, alphaChange)
 
 ## Returns
 
-(*STRING*) Modified hex color
+(*STRING*) Modified hex colour
+
+## Example
+
+```dax
+EvaluationContext.Colour.Hex.AdjustAlpha("#5E81AC", -2.0) // Returns "#5E81AC66"
+```
 
 ## Definition
 

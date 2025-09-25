@@ -25,6 +25,12 @@ EvaluationContext.Colour.Hex.Luminance(hexColor)
 
 (*DOUBLE*) Luminance value (0-1)
 
+## Example
+
+```dax
+EvaluationContext.Colour.Hex.Luminance( "#5E81AC") // Returns 0.52
+```
+
 ## Definition
 
 ```dax
