@@ -1,18 +1,21 @@
 ---
 title: RGB.ToHex
-parent: Functions
-nav_order: 5
+parent: Colour Conversion
+grand_parent: Functions
+nav_order: 1.04
 ---
 
 # EvaluationContext.Colour.RGB.ToHex
 
 Converts RGB color values to hexadecimal format
 
+## Syntax
+
 ```dax
 EvaluationContext.Colour.RGB.ToHex(red, green, blue, alpha)
 ```
 
-**Parameters:**
+## Parameters
 
 | Parameter | Type | Required | Description |
 |:---:|:---:|:---:|:---:|
@@ -21,9 +24,11 @@ EvaluationContext.Colour.RGB.ToHex(red, green, blue, alpha)
 | blue | INT64 | Yes | The blue value (0-255) |
 | alpha | DOUBLE | No | The alpha value (0-1) |
 
-**Returns:** (*STRING*) Hex color string with optional alpha
+## Returns
 
-**Example:**
+(*STRING*) Hex color string with optional alpha
+
+## Example
 
 ```dax
 EvaluationContext.Colour.RGB.ToHex(255, 0, 0) // Returns "#FF0000"

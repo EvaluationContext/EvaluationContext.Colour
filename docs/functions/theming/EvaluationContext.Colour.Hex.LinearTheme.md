@@ -1,18 +1,21 @@
 ---
 title: Hex.LinearTheme
-parent: Functions
-nav_order: 18
+parent: Colour Theming
+grand_parent: Functions
+nav_order: 3.02
 ---
 
 # EvaluationContext.Colour.Hex.LinearTheme
 
 Creates a linear gradient variant of a hex color
 
+## Syntax
+
 ```dax
 EvaluationContext.Colour.Hex.LinearTheme(hexColor, variant, steps, linearRange)
 ```
 
-**Parameters:**
+## Parameters
 
 | Parameter | Type | Required | Description |
 |:---:|:---:|:---:|:---:|
@@ -21,4 +24,6 @@ EvaluationContext.Colour.Hex.LinearTheme(hexColor, variant, steps, linearRange)
 | steps | INT64 | Yes | The number of steps in the gradient (minimum = 2) |
 | linearRange | DOUBLE | Yes | The range of luminance adjustment |
 
-**Returns:** (*STRING*) Gradient variant color in hex format
+## Returns
+
+(*STRING*) Gradient variant color in hex format

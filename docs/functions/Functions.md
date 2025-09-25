@@ -1,14 +1,61 @@
 ---
 title: Functions
 nav_order: 2
+has_children: true
+permalink: /docs/functions
 ---
 
-**Color Conversion:** Functions like `Int.ToHex`, `Hex.ToInt`, `RGB.ToHex`, and `HSL.ToHex` allow you to convert color values between different formats (integer, hexadecimal, RGB, HSL). This is useful for working with various colour sources
+# Functions
 
-**Color Manipulation:** Functions like `Hex.AdjustHue`, `Hex.AdjustSaturation`, and `Hex.AdjustLuminance` enable you to modify existing colors. For example, you can create a lighter shade of a color by adjusting its luminance.
+The EvaluationContext.Colour library provides a comprehensive set of functions for working with colors in Power BI. These functions are organized into three main categories:
 
-**Color Extraction:** Functions such as `Hex.Hue`, `Hex.Saturation`, `Hex.Luminance`, and `Hex.Alpha` can extract specific components of a hexadecimal color string
+---
 
-**Theming and Interpolation:** The `Hex.Theme` function provides access to pre-defined color palettes, while `Hex.LinearTheme` and `Hex.Interpolate` are used for creating gradients and smooth transitions between colors
+## Hex Colour Manipulation
 
-**Text Readability:** The `Hex.TextColour` function is a great tool for automatically choosing a text color (black or white) that provides sufficient contrast against a given background color, improving readability
+Core functions for working with hex colours directly. These functions allow you to:
+
+- Adjust color properties (hue, saturation, luminance, alpha)
+- Extract color components
+- Optimize text contrast
+
+Key functions:
+- `Hex.AdjustHue`, `Hex.AdjustSaturation`, `Hex.AdjustLuminance`
+- `Hex.Hue`, `Hex.Saturation`, `Hex.Luminance`, `Hex.Alpha`
+- `Hex.TextColour` for contrast-based text color selection
+
+[View Hex Manipulation Functions →](/docs/functions/hex-manipulation/){: .btn .btn-outline }
+
+---
+
+## Colour Theming
+
+Functions for creating and managing consistent color themes in your reports:
+
+- Generate color palettes
+- Create smooth color transitions
+- Build linear color themes
+
+Key functions:
+- `Hex.Theme` for predefined color palettes
+- `Hex.LinearTheme` for generating color scales
+- `Hex.Interpolate` for smooth transitions between colors
+
+[View Theming Functions →](/docs/functions/theming/){: .btn .btn-outline }
+
+---
+
+## Colour Conversion
+
+Functions for converting between different color formats:
+
+- Convert between hex and integer formats
+- Transform RGB values to hex
+- Convert HSL colors to hex
+
+Key functions:
+- `Int.ToHex` and `Hex.ToInt`
+- `RGB.ToHex` for RGB color conversion
+- `HSL.ToHex` for HSL color conversion
+
+[View Conversion Functions →](/docs/functions/conversion/){: .btn .btn-outline }

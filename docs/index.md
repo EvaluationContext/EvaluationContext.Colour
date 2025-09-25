@@ -1,0 +1,66 @@
+---
+title: EvaluationContext.Colour
+layout: home
+nav_order: 1
+description: "A comprehensive set of DAX User-Defined Functions (UDF) designed to enable easy manipulation of hex colours for Power BI."
+permalink: /
+---
+
+# EvaluationContext.Colour
+{: .fs-9 }
+
+A set of DAX User-Defined Functions (UDF) designed to enable easy manipulation of hex colours for Power BI.
+{: .fs-6 .fw-300 }
+
+[Download From DaxLib](https://daxlib.org/package/EvaluationContext.Colour/){: .btn .btn-primary .mr-2 }
+[Download Example PBIP](https://github.com/EvaluationContext/EvaluationContext.Colour/tree/main/assets/PBIP){: .btn .btn-outline }
+
+---
+
+![Library in Action](/assets/img/UDFInPowerBI.png)
+
+---
+
+### Colour Conversion
+
+Functions for converting between different color formats:
+
+- Convert between hex and integer formats
+- Transform RGB values to hex
+- Convert HSL colors to hex
+
+[View Conversion Functions →](/docs/functions/conversion/){: .btn .btn-outline }
+
+---
+
+### Hex Colour Manipulation
+
+Core functions for working with hex colours directly:
+
+- Adjust color properties (hue, saturation, luminance, alpha)
+- Extract color components
+- Optimize text contrast
+
+[View Hex Manipulation Functions →](/docs/functions/hex-manipulation/){: .btn .btn-outline }
+
+---
+
+### Colour Theming
+
+Functions for creating and managing consistent color themes:
+
+- Generate color palettes
+- Create smooth color transitions
+- Build linear color themes
+
+[View Theming Functions →](/docs/functions/theming/){: .btn .btn-outline }
+
+---
+
+## Getting Started
+
+1. Download the library from [DaxLib](https://daxlib.org/package/EvaluationContext.Colour/)
+2. Import into Power BI using External Tools
+3. Start using the functions in your measures and calculations
+
+For detailed examples, check out our [example PBIP file](https://github.com/EvaluationContext/EvaluationContext.Colour/tree/main/assets/PBIP).
