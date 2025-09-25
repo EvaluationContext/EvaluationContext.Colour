@@ -48,7 +48,8 @@ plugins:
   - jekyll-relative-links
   - jekyll-include-cache
 
-url: "https://evaluationcontext.github.io/EvaluationContext.Colour"
+url: "https://evaluationcontext.github.io"
+baseurl: "/EvaluationContext.Colour"
 repository: EvaluationContext/EvaluationContext.Colour
 
 permalink: pretty

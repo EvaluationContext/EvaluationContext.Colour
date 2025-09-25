@@ -1,32 +1,20 @@
-{% assign cache_bust = site.time | date:'%Y%m%d%H%M%S' %}
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
-
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/google-light.css?v={{ cache_bust }}">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/google-light.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css" integrity="sha512-0aPQyyeZrWj9sCA46UlmWgKOP0mUipLQ6OZXu8l4IcAmD2u31EPEy9VcIMvl7SoAaKe8bLXZhYoMaE/in+gcgA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.1/css/all.min.css" />
 
-<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/img/favicons/apple-touch-icon.png?v={{ cache_bust }}">
-<link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/img/favicons/favicon-32x32.png?v={{ cache_bust }}">
-<link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/img/favicons/favicon-16x16.png?v={{ cache_bust }}">
-<link rel="manifest" href="{{ site.baseurl }}/assets/img/favicons/site.webmanifest?v={{ cache_bust }}">
-<link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicons/favicon.ico?v={{ cache_bust }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/assets/img/favicons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/assets/img/favicons/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/assets/img/favicons/favicon-16x16.png">
+<link rel="manifest" href="{{ site.baseurl }}/assets/img/favicons/site.webmanifest">
+<link rel="shortcut icon" href="{{ site.baseurl }}/assets/img/favicons/favicon.ico">
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js" integrity="sha512-EBLzUL8XLl+va/zAsmXwS7Z2B1F9HUHkZwyS/VKwh3S7T/U0nF4BaU29EP/ZSf6zgiIxYAnKLu6bJ8dqpmX5uw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/fsharp.min.js" integrity="sha512-S3tgSOL0xKKsqOdbPP7AZKtb/L0bXVG/PW7RNRVXOqCWEiBRzIq9oTIinLoY11MB58l1/f++IHM+mp1Nfk2ETA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/languages/plaintext.min.js" integrity="sha512-8G3A7cgC22yWtFGqrwXjmznP+IcB9wYQRgsOVO4pQDpJ0HWgpD8lMMShOXdU225S4qww0bEUwsz+foINFWbwwQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="{{ site.baseurl }}/assets/js/highlight/languages/dax.js?v={{ cache_bust }}"></script>
-<script src="{{ site.baseurl }}/assets/js/highlightjs-badge/highlightjs-badge.js?v={{ cache_bust }}"></script>
+<script src="{{ site.baseurl }}/assets/js/highlight/languages/dax.js}"></script>
+<script src="{{ site.baseurl }}/assets/js/highlightjs-badge/highlightjs-badge.js"></script>
 <script>
   document.addEventListener('DOMContentLoaded', (event) => {
-    // Force cache refresh for images
-    document.querySelectorAll('img').forEach(img => {
-      const currentSrc = img.src;
-      if (currentSrc.startsWith(window.location.origin)) {
-        img.src = currentSrc + (currentSrc.includes('?') ? '&' : '?') + 'v={{ cache_bust }}';
-      }
-    });
 
     // Highlight code blocks
     document.querySelectorAll('pre code').forEach((block) => {
