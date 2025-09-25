@@ -14,6 +14,7 @@ A set of DAX User-Defined Functions (UDF) designed to enable easy manipulation o
 
 [Download From DaxLib](https://daxlib.org/package/EvaluationContext.Colour/){: .btn .btn-primary .mr-2 }
 [Download Example PBIP](https://github.com/EvaluationContext/EvaluationContext.Colour/tree/main/assets/PBIP){: .btn .btn-outline }
+[0.1.2-beta]({{ site.baseurl }}/docs/version/){: .btn .btn-green }
 
 ---
 

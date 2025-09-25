@@ -3,14 +3,18 @@ title: Version History
 nav_order: 4
 ---
 
-# Version History
+## Version History
 
-## Current Version
+Current Version: 0.1.2-beta{: .btn .btn-green }
 
-0.1.2-beta
-{: .label .label-green }
+### 0.1.2-beta
 
-## Changelog
+- Added `EvaluationContext.Colour.Hex.Interpolate()`{:.dax}
+- Documentation site launch
+
+###  0.1.1-beta
+
+- fixed typos
 
 ###  0.1.0-beta
 
@@ -19,12 +23,3 @@ Initial release of the EvaluationContext.Colour library with support for:
 - Color conversion between formats (RGB, HSL, Int)
 - Theming and color palette generation
 - Text contrast optimization
-
-###  0.1.1-beta
-
-- fixed typos
-
-### 0.1.2-beta
-
-- Added EvaluationContext.Colour.Hex.Interpolate()
-- Documentation site launch
