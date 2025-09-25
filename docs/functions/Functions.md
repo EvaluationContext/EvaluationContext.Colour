@@ -23,7 +23,7 @@ Key functions:
 - `Hex.Hue`, `Hex.Saturation`, `Hex.Luminance`, `Hex.Alpha`
 - `Hex.TextColour` for contrast-based text color selection
 
-[View Hex Manipulation Functions →](/docs/functions/hex-manipulation/){: .btn .btn-outline }
+[View Hex Manipulation Functions →]({{ site.baseurl }}/docs/functions/hex-manipulation/){: .btn .btn-outline }
 
 ---
 
@@ -40,7 +40,7 @@ Key functions:
 - `Hex.LinearTheme` for generating color scales
 - `Hex.Interpolate` for smooth transitions between colors
 
-[View Theming Functions →](/docs/functions/theming/){: .btn .btn-outline }
+[View Theming Functions →]({{ site.baseurl }}/docs/functions/theming/){: .btn .btn-outline }
 
 ---
 
@@ -57,4 +57,4 @@ Key functions:
 - `RGB.ToHex` for RGB color conversion
 - `HSL.ToHex` for HSL color conversion
 
-[View Conversion Functions →](/docs/functions/conversion/){: .btn .btn-outline }
+[View Conversion Functions →]({{ site.baseurl }}/docs/functions/conversion/){: .btn .btn-outline }
