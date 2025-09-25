@@ -1,6 +1,46 @@
-title: EvaluationContext.Colour Docs
-description: Docs for the DaxLib EvaluationContext.Colour library. A set of DAX User-Defined Functions (UDF) designed to enable easy manipulation of hex colours for Power BI.
+title: EvaluationContext.Colour
+description: A set of DAX User-Defined Functions (UDF) designed to enable easy manipulation of hex colours for Power BI.
 remote_theme: just-the-docs/just-the-docs
+
+# Language and locale settings
+lang: en
+locale: en_US
+
+# SEO settings
+author:
+  name: EvaluationContext
+  url: https://github.com/EvaluationContext
+social:
+  name: Jake Duddy
+  links:
+    - https://www.linkedin.com/in/jakeduddy/
+
+# Remove logo to hide the icon
+# logo: "/assets/img/icon.png"
+favicon_ico: "/assets/img/favicons/favicon.ico"
+
+# CSS customization
+aux_links:
+  "GitHub":
+    - "https://github.com/EvaluationContext/EvaluationContext.Colour"
+
+aux_links_new_tab: true
+
+# Theme settings
+color_scheme: light
+
+# Enable or disable the site search
+search_enabled: true
+
+# Heading anchor links appear on hover over h1-h6 tags
+heading_anchors: true
+
+# External navigation links
+nav_external_links:
+  - title: DaxLib.org
+    url: https://daxlib.org/package/EvaluationContext.Colour/
+    hide_icon: false
+
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
@@ -17,11 +57,6 @@ defaults:
     values:
       layout: "default"
 
-# logo: "/assets/img/icon.png"
-favicon_ico: "/asset/img/favicon/favicon.ico"
-
-search_enabled: true
-
 callouts_level: quiet # or loud
 callouts:
   info:
@@ -30,8 +65,6 @@ callouts:
   tip:
     title: tip
     color: green
-
-heading_anchors: true
 
 kramdown:
   syntax_highlighter: none
