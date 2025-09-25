@@ -5,7 +5,7 @@ nav_order: 4
 
 ## Version History
 
-Current Version: 0.1.2-beta{: .btn .btn-green }
+[Current Version: 0.1.2-beta](){: .btn .btn-green }
 
 ### 0.1.2-beta
 
