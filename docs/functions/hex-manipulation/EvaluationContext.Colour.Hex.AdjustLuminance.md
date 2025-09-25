@@ -25,3 +25,23 @@ EvaluationContext.Colour.Hex.AdjustLuminance(hexColor, luminanceChange)
 ## Returns
 
 (*STRING*) Modified hex color
+
+## Definition
+
+```dax
+EvaluationContext.Colour.Hex.AdjustLuminance =
+    (
+        hexColor: STRING,
+        luminanceChange: DOUBLE
+    ) =>
+    
+        VAR H = EvaluationContext.Colour.Hex.Hue( hexColor )
+        VAR S = EvaluationContext.Colour.Hex.Saturation( hexColor )
+        VAR L = EvaluationContext.Colour.Hex.Luminance( hexColor )
+        VAR A = EvaluationContext.Colour.Hex.Alpha( hexColor )
+    
+        VAR NewL = MIN( MAX( L + luminanceChange, 0 ), 1 )
+    
+        RETURN
+            EvaluationContext.Colour.HSL.ToHex( H, S, NewL, A )
+```

@@ -24,3 +24,17 @@ EvaluationContext.Colour.Hex.TextColour(backgroundHex)
 ## Returns
 
 (*STRING*) <span style="color: #000000">■</span> #000000 for dark text or <span style="color: #FFFFFF">■</span> #FFFFFF for light text
+
+## Definition
+
+```dax
+EvaluationContext.Colour.Hex.TextColour =
+    (
+        backgroundHex: STRING
+    ) =>
+    
+        VAR L = EvaluationContext.Colour.Hex.Luminance( backgroundHex )
+        VAR result = IF( L > 0.5, "#000000", "#FFFFFF")  // dark text for light backgrounds, light text for dark backgrounds
+    
+        RETURN result
+```

@@ -25,3 +25,22 @@ EvaluationContext.Colour.Hex.AdjustAlpha(hexColor, alphaChange)
 ## Returns
 
 (*STRING*) Modified hex color
+
+## Definition
+
+```dax
+EvaluationContext.Colour.Hex.AdjustAlpha =
+    (
+        hexColor: STRING,
+        alphaChange: DOUBLE
+    ) =>
+    
+        VAR CleanHex = IF( LEFT( hexColor, 1) = "#", MID( hexColor, 2, 6), MID( hexColor, 1, 6 ) )
+        VAR A = EvaluationContext.Colour.Hex.Alpha( hexColor )
+    
+        VAR NewA = EvaluationContext.Colour.Int.ToHex( MIN( MAX( A + alphaChange, 0 ), 1 ) * 255, 2 )
+    
+        VAR result = "#" & CleanHex & NewA
+    
+        RETURN result
+```

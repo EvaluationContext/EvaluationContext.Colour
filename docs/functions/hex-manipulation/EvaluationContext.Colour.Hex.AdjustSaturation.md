@@ -25,3 +25,23 @@ EvaluationContext.Colour.Hex.AdjustSaturation(hexColor, saturationChange)
 ## Returns
 
 (*STRING*) Modified hex color
+
+## Definition
+
+```dax
+EvaluationContext.Colour.Hex.AdjustSaturation =
+    (
+        hexColor: STRING,
+        saturationChange: DOUBLE
+    ) =>
+    
+        VAR H = EvaluationContext.Colour.Hex.Hue( hexColor )
+        VAR S = EvaluationContext.Colour.Hex.Saturation( hexColor )
+        VAR L = EvaluationContext.Colour.Hex.Luminance( hexColor )
+        VAR A = EvaluationContext.Colour.Hex.Alpha( hexColor )
+    
+        VAR NewS = MIN( MAX( S + saturationChange, 0 ), 1 )
+    
+        RETURN
+            EvaluationContext.Colour.HSL.ToHex( H, NewS, L, A )
+```

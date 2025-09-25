@@ -27,3 +27,25 @@ EvaluationContext.Colour.Hex.LinearTheme(hexColor, variant, steps, linearRange)
 ## Returns
 
 (*STRING*) Gradient variant color in hex format
+
+## Definition
+
+```dax
+EvaluationContext.Colour.Hex.LinearTheme =
+    (
+        hexColor: STRING,
+        variant: INT64,
+        steps: INT64,
+        linearRange: DOUBLE
+    ) =>
+    
+        VAR StepSize = linearRange / ( steps - 1 )
+        VAR AdjustedVariant = MOD( variant - 1, steps ) + 1
+        VAR Hex =
+            EvaluationContext.Colour.Hex.AdjustLuminance(
+                hexColor,
+                ( (AdjustedVariant - 1) * StepSize ) - ( linearRange / 2 )
+            )
+    
+        RETURN Hex
+```

@@ -30,3 +30,34 @@ EvaluationContext.Colour.Hex.Hue(hexColor)
 ```dax
 EvaluationContext.Colour.Hex.Hue("#FF0000") // Returns 0
 ```
+
+## Definition
+
+```dax
+EvaluationContext.Colour.Hex.Hue =
+    (
+        hexColor: STRING
+    ) =>
+    
+        VAR CleanHex = IF( LEFT( hexColor, 1) = "#", MID(hexColor, 2, 6), MID( hexColor, 1, 6 ) )
+        VAR R = EvaluationContext.Colour.Hex.ToInt( MID( CleanHex, 1, 2 ) )
+        VAR G = EvaluationContext.Colour.Hex.ToInt( MID( CleanHex, 3, 2 ) )
+        VAR B = EvaluationContext.Colour.Hex.ToInt( MID( CleanHex, 5, 2 ) )
+    
+        VAR Mx = MAX( MAX( R, G ), B)
+        VAR Mn = MIN( MIN( R, G ), B)
+        VAR Delta = Mx - Mn
+    
+        VAR H =
+            SWITCH(
+                true,
+                Delta = 0, 0,
+                Mx = R, MOD( ( G - B ) / Delta, 6),
+                Mx = G, ( ( B - R ) / Delta ) + 2,
+                Mx = B, ( ( R - G ) / Delta ) + 4
+            ) * 60
+    
+        VAR result = ROUND(H, 0)
+    
+        RETURN result
+```

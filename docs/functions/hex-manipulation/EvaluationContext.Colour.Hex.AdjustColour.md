@@ -28,3 +28,23 @@ EvaluationContext.Colour.Hex.AdjustColour(hexColor, hueChange, saturationChange,
 ## Returns
 
 (*STRING*) Modified hex color
+
+## Definition
+
+```dax
+EvaluationContext.Colour.Hex.AdjustColour =
+    (
+        hexColor: STRING,
+        hueChange: INT64,
+        saturationChange: DOUBLE,
+        luminanceChange: DOUBLE,
+        alphaChange: DOUBLE
+    ) =>
+    
+        VAR Step1 = IF( HueChange = 0, hexColor, EvaluationContext.Colour.Hex.AdjustHue( hexColor, hueChange ) )
+        VAR Step2 = IF( saturationChange = 0, Step1, EvaluationContext.Colour.Hex.AdjustSaturation( Step1, saturationChange ) )
+        VAR Step3 = IF( luminanceChange = 0, Step2, EvaluationContext.Colour.Hex.AdjustLuminance( Step2, luminanceChange ) )
+        VAR Step4 = IF( alphaChange = 0, Step3, EvaluationContext.Colour.Hex.AdjustAlpha( Step3, alphaChange ) )
+    
+        RETURN Step4
+```

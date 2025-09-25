@@ -24,3 +24,19 @@ EvaluationContext.Colour.Hex.Alpha(hexColor)
 ## Returns
 
 (*DOUBLE*) Alpha value (0-1)
+
+## Definition
+
+```dax
+EvaluationContext.Colour.Hex.Alpha =
+    (
+        hexColor: STRING
+    ) =>
+    
+        VAR CleanHex = IF( LEFT( hexColor, 1) = "#", MID( hexColor, 2, 8), MID( hexColor, 1, 8 ) )
+        VAR AlphaHex = IF( LEN( CleanHex ) = 8, MID( CleanHex, 7, 2 ), "FF" )
+        VAR Alpha = EvaluationContext.Colour.Hex.ToInt( AlphaHex )
+        VAR result = ROUND( Alpha / 255, 4 )
+    
+        RETURN result
+```

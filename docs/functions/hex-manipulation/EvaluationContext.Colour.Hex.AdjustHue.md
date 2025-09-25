@@ -25,3 +25,23 @@ EvaluationContext.Colour.Hex.AdjustHue(hexColor, hueChange)
 ## Returns
 
 (*STRING*) Modified hex color
+
+## Definition
+
+```dax
+EvaluationContext.Colour.Hex.AdjustHue =
+    (
+        hexColor: STRING,
+        hueChange: DOUBLE
+    ) =>
+    
+        VAR H = EvaluationContext.Colour.Hex.Hue( hexColor )
+        VAR S = EvaluationContext.Colour.Hex.Saturation( hexColor )
+        VAR L = EvaluationContext.Colour.Hex.Luminance( hexColor )
+        VAR A = EvaluationContext.Colour.Hex.Alpha( hexColor )
+    
+        VAR NewH = MOD( H + hueChange + 360, 360 )  // Wrap around 0-360
+    
+        RETURN
+            EvaluationContext.Colour.HSL.ToHex( NewH, S, L, A )
+```
