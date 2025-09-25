@@ -1,5 +1,9 @@
 {% assign cache_bust = site.time | date:'%Y%m%d%H%M%S' %}
-<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/google-light.css">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+
+<link rel="stylesheet" href="{{ site.baseurl }}/assets/css/google-light.css?v={{ cache_bust }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/default.min.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.7.1/css/all.min.css" />
 
@@ -16,9 +20,20 @@
 <script src="{{ site.baseurl }}/assets/js/highlightjs-badge/highlightjs-badge.js?v={{ cache_bust }}"></script>
 <script>
   document.addEventListener('DOMContentLoaded', (event) => {
+    // Force cache refresh for images
+    document.querySelectorAll('img').forEach(img => {
+      const currentSrc = img.src;
+      if (currentSrc.startsWith(window.location.origin)) {
+        img.src = currentSrc + (currentSrc.includes('?') ? '&' : '?') + 'v={{ cache_bust }}';
+      }
+    });
+
+    // Highlight code blocks
     document.querySelectorAll('pre code').forEach((block) => {
       hljs.highlightBlock(block);
     });
+
+    // Add badges
     setTimeout(function () {
       if (window.highlightJsBadge) {
         window.highlightJsBadge();
