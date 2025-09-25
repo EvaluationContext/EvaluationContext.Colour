@@ -29,7 +29,7 @@ Functions for converting between different color formats:
 - Transform RGB values to hex
 - Convert HSL colors to hex
 
-[View Conversion Functions →](/docs/functions/conversion/){: .btn .btn-outline }
+[View Conversion Functions →]({{ site.baseurl }}/docs/functions/conversion/){: .btn .btn-outline }
 
 ---
 
@@ -41,7 +41,7 @@ Core functions for working with hex colours directly:
 - Extract color components
 - Optimize text contrast
 
-[View Hex Manipulation Functions →](/docs/functions/hex-manipulation/){: .btn .btn-outline }
+[View Hex Manipulation Functions →]({{ site.baseurl }}/docs/functions/hex-manipulation/){: .btn .btn-outline }
 
 ---
 
@@ -53,7 +53,7 @@ Functions for creating and managing consistent color themes:
 - Create smooth color transitions
 - Build linear color themes
 
-[View Theming Functions →](/docs/functions/theming/){: .btn .btn-outline }
+[View Theming Functions →]({{ site.baseurl }}/docs/functions/theming/){: .btn .btn-outline }
 
 ---
 
