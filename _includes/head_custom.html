@@ -24,3 +24,28 @@
   hljs.configure({ cssSelector: 'code' });
   hljs.highlightAll();
 </script>
+
+<!-- PWA registration -->
+<script>
+  if ('serviceWorker' in navigator) {
+    const baseUrl = "{{ site.baseurl }}";
+    // Use the correct path for the service worker file in assets/js/pwa
+    const swUrl = `${baseUrl}/assets/js/pwa/sw.js?v={% if site.pwa.cache.version %}{{ site.pwa.cache.version }}{% else %}{{ "now" | date: "%s" }}{% endif %}`;
+
+    window.addEventListener('load', function() {
+      navigator.serviceWorker.register(swUrl)
+        .then(function(registration) {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(function(error) {
+          console.error('Service Worker registration failed:', error);
+        });
+    });
+  }
+</script>
+
+<!-- PWA update notification component -->
+<div id="pwa-update-toast" style="position: fixed; bottom: 20px; right: 20px; background: #4a4a4a; color: white; padding: 15px; border-radius: 5px; display: none; z-index: 9999;">
+  <div style="margin-bottom: 10px;">A new version of this site is available!</div>
+  <button id="pwa-refresh-btn" style="background: #2ecc71; border: none; color: white; padding: 5px 10px; cursor: pointer; border-radius: 3px;">Update & Refresh</button>
+</div>

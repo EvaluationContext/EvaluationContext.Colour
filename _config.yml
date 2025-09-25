@@ -61,6 +61,18 @@ defaults:
     values:
       layout: "default"
 
+# PWA settings
+pwa:
+  enabled: true
+  cache:
+    enabled: true
+    # Version number for cache busting (increment this when content changes)
+    version: '1.0.0'
+    # Files that will not be cached
+    deny_paths:
+      - /assets/js/data/
+      - /sw.min.js
+
 callouts_level: quiet # or loud
 callouts:
   info:
