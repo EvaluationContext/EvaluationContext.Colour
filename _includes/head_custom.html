@@ -29,8 +29,7 @@
 <script>
   if ('serviceWorker' in navigator) {
     const baseUrl = "{{ site.baseurl }}";
-    // Use the correct path for the service worker file in assets/js/pwa
-    const swUrl = `${baseUrl}/assets/js/pwa/sw.js?v={% if site.pwa.cache.version %}{{ site.pwa.cache.version }}{% else %}{{ "now" | date: "%s" }}{% endif %}`;
+    const swUrl = `${baseUrl}/assets/js/pwa/sw.js?v={{ site.time | date: '%Y%m%d%H%M%S' }}`;
 
     window.addEventListener('load', function() {
       navigator.serviceWorker.register(swUrl)
