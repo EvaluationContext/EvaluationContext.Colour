@@ -32,8 +32,8 @@ var hljsGrammar = (function () {
       'VISUAL',
       'SHAPE',
       'IN',
-      'TRUE',
-      'FALSE',
+      // 'TRUE', // Removed to prevent highlighting in SWITCH statements
+      // 'FALSE', // Removed to prevent highlighting in SWITCH statements
       'NOT',
       'ASC',
       'DESC',
@@ -498,14 +498,21 @@ var hljsGrammar = (function () {
 
     // https://dax.guide/datatypes/
     const TYPES = [
-      'BINARY',
-      'BOOLEAN',
-      'CURRRENCY',
-      'DATETIME',
+      // Data types from the provided table only
+      'ANYVAL',
+      'SCALAR',
+      'INT64',
       'DECIMAL',
-      'INTEGER',
+      'DOUBLE',
       'STRING',
-      'VARIANT',
+      'DATETIME',
+      'BOOLEAN',
+      'NUMERIC',
+      'TABLE',
+      'ANYREF',
+      'INTEGER',
+      'BINARY',
+      'CURRENCY'
     ];
 
     // Updated user-defined function matcher
@@ -530,7 +537,7 @@ var hljsGrammar = (function () {
     // https://learn.microsoft.com/en-us/dax/dax-operator-reference
     const OPERATOR = {
       className: 'operator',
-      begin: /[-+*/^]|==?|&&?|\|\||<(?:=>?|<|>)?|>[>=]?/,
+      begin: /[-+*/^&]|==?|&&?|\|\||<(?:=>?|<|>)?|>[>=]?/,
       relevance: 0,
     };
 
@@ -563,6 +570,74 @@ var hljsGrammar = (function () {
       begin: /\[.+\]/,
       relevance: 0,
     };
+    
+    // Special case for SWITCH function to prevent true/false coloring issues
+    const SWITCH_FUNCTION = {
+      className: 'built_in',
+      begin: /\bSWITCH\b/i,
+      end: /\(/,
+      excludeEnd: true,
+      relevance: 20
+    };
+    
+    // Special rule for SWITCH(true, ...) pattern
+    const SWITCH_TRUE = {
+      begin: /\b(SWITCH)\s*\(\s*(true)\b/i,
+      end: /\)/,
+      excludeEnd: true,
+      returnBegin: true,
+      contains: [
+        {
+          // Match the SWITCH keyword
+          className: 'built_in',
+          begin: /SWITCH/i,
+          end: /\s*\(/,
+          excludeEnd: true
+        },
+        {
+          // Match the TRUE keyword but don't color it specially
+          begin: /\(\s*true\b/i,
+          end: /,/,
+          excludeEnd: true
+        },
+        {
+          // For the content after 'true,'
+          begin: /,/,
+          end: /(?=\))/,
+          contains: [
+            STRING,
+            NUMBER,
+            {
+              className: 'operator',
+              begin: /&|<|>|=|,/
+            },
+            // We don't add specific rules for variables to avoid coloring
+          ]
+        }
+      ],
+      relevance: 30  // Highest priority
+    };
+    
+    // Data type after colon
+    const DATA_TYPE_AFTER_COLON = {
+      className: 'type',
+      begin: /:\s*(ANYVAL|SCALAR|VARIANT|INT64|DECIMAL|DOUBLE|STRING|DATETIME|BOOLEAN|NUMERIC|TABLE|ANYREF)\b/i,
+      relevance: 10
+    };
+    
+    // Type indicators (VAL, EXPR)
+    const TYPE_INDICATOR = {
+      className: 'keyword',
+      begin: /\b(VAL|EXPR)\b/,
+      relevance: 5
+    };
+    
+    // Boolean literals - only highlighted when standalone (not in SWITCH conditions)
+    const BOOLEAN_LITERAL = {
+      className: 'literal',
+      begin: /\b(TRUE|FALSE)\b(?!\s*,)/i,
+      relevance: 5
+    };
 
     return {
       name: 'DAX',
@@ -574,7 +649,12 @@ var hljsGrammar = (function () {
       contains: [
         hljs.COMMENT('//', '$'),
         hljs.C_BLOCK_COMMENT_MODE,
-        USER_DEFINED_FUNCTION, // Put this first for higher priority
+        SWITCH_TRUE, // This must come first to have highest priority
+        SWITCH_FUNCTION, // Special handling for SWITCH function
+        DATA_TYPE_AFTER_COLON, // Add this before other rules to prioritize it
+        TYPE_INDICATOR, // For VAL and EXPR keywords
+        BOOLEAN_LITERAL, // For TRUE/FALSE only when not in SWITCH conditions
+        USER_DEFINED_FUNCTION,
         BUILTIN_FUNCTION,
         TABLECOLUMN,
         MEASURE,
