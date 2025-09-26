@@ -18,8 +18,8 @@ nav_order: 4
 
 ###  0.1.0-beta
 
-Initial release of the EvaluationContext.Colour library with support for:
-- Hex color manipulation (hue, saturation, luminance, alpha)
-- Color conversion between formats (RGB, HSL, Int)
-- Theming and color palette generation
-- Text contrast optimization
+- Initial release of the EvaluationContext.Colour library with support for:
+    - Hex color manipulation (hue, saturation, luminance, alpha)
+    - Color conversion between formats (RGB, HSL, Int)
+    - Theming and color palette generation
+    - Text contrast optimization

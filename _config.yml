@@ -77,7 +77,6 @@ callouts:
     title: Info
     color: blue
   tip:
-    title: tip
     color: green
 
 kramdown:
